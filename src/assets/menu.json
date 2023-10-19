@@ -1,0 +1,164 @@
+{
+  "menu": [
+    {
+      "header": "Sandwiches",
+      "items": [
+        {
+          "name": "Cream cheese (plain, dill & caper, chive, cashew (+$1), vanilla & mascarpone)",
+          "price": "$8.5"
+        },
+        {
+          "name": "Pickled jalapeños & cream cheese",
+          "price": "$10.5"
+        },
+        {
+          "name": "Cream cheese, tomato, basil oil & cracked pepper",
+          "price": "$11"
+        },
+        {
+          "name": "Avocado, chive cream cheese, tomato, pink salt & chilli oil",
+          "price": "$12"
+        },
+        {
+          "name": "Egg salad, tasty cheese, green tomato chutney, rocket & dijon",
+          "price": "$13"
+        },
+        {
+          "name": "Free range ham, tasty cheese, egg salad, pickles, dijon & mayo",
+          "price": "$15"
+        },
+        {
+          "name": "Smoked salmon, dill & caper cream cheese, tomato & onion",
+          "price": "$17"
+        },
+        {
+          "name": "Smoked salmon, avocado, cream cheese, tomato & lemon oil",
+          "price": "$17.5"
+        },
+        {
+          "name": "Chicken salad, avocado, bbq sauce, tomato, onion, rocket & tasty cheese",
+          "price": "$17.5"
+        },
+        {
+          "name": "Brisket pastrami, hot ‘n’ sweet mustard, cream cheese & pickles",
+          "price": "$16"
+        },
+        {
+          "name": "Beetroot, avocado, cashew cream cheese & rocket",
+          "price": "$14"
+        },
+        {
+          "name": "Cream cheese & raspberry jam",
+          "price": "$9"
+        },
+        {
+          "name": "Crunchy peanut butter & raspberry jam",
+          "price": "$9"
+        }
+      ]
+    },
+    {
+    "header": "Bagels",
+    "items": [
+        {
+          "name": "Single Bagel",
+          "price": "$4"
+        },
+        {
+          "name": "Half Dozen",
+          "price": "$23"
+        },
+        {
+          "name": "Bakers Dozen",
+          "price": "$46"
+        },
+        {
+          "name": "Cream cheese tub",
+          "price": "$7"
+        }
+      ]
+    },
+    {
+    "header": "Hot Drinks",
+    "items": [
+        {
+          "name": "Batch Brew",
+          "price": "$4 / 4.5 / 5"
+        },
+        {
+          "name": "Espresso",
+          "price": "$3.6"
+        },
+        {
+          "name": "Long Black / Short Mac / Piccolo",
+          "price": "$4"
+        },
+        {
+          "name": "Latte / Flat White / Cappuccino",
+          "price": "$4 / 5 / 5.5"
+        },
+        {
+          "name": "Chai Latte",
+          "price": "$4.5 / 5 / 5.5"
+        },
+        {
+          "name": "Hot Chocolate",
+          "price": "$5 / 5.5 / 6"
+        },
+        {
+          "name": "Mocha",
+          "price": "$6 / 6.5 / 7"
+        },
+        {
+          "name": "Oat / Soy / Almond",
+          "price": "$0.5"
+        },
+        {
+          "name": "Decaf",
+          "price": "$0.25"
+        }
+      ]
+    },
+    {
+    "header": "Cold Drinks",
+    "items": [
+        {
+          "name": "Cold Brew",
+          "price": "$4 / 5.75 / 7"
+        },
+        {
+          "name": "Iced Latte",
+          "price": "$5.5 / 6.5 / 7.5"
+        },
+        {
+          "name": "Fresh Orange Juice",
+          "price": "$5 / 7 / 9"
+        },
+        {
+          "name": "Fresh Beetroot, Apple & Ginger Juice",
+          "price": "$6 / 8 / 10"
+        },
+        {
+          "name": "Fresh Strawberry & Apple Juice",
+          "price": "$6 / 8 / 10"
+        },
+        {
+          "name": "Sparkling Water",
+          "price": "$5"
+        },
+        {
+          "name": "Supermaté soda",
+          "price": "$5"
+        },
+        {
+          "name": "Yuzu Soda",
+          "price": "$5"
+        },
+        {
+          "name": "Coconut Water",
+          "price": "$6"
+        }
+      ]
+    }
+  ]
+}
