@@ -1,8 +1,5 @@
 {
-  "menu": [
-    {
-      "header": "Sandwiches",
-      "items": [
+  "sandwiches": [
         {
           "name": "Cream cheese (plain, dill & caper, chive, cashew (+$1), vanilla & mascarpone)",
           "price": "$8.5"
@@ -55,12 +52,9 @@
           "name": "Crunchy peanut butter & raspberry jam",
           "price": "$9"
         }
-      ]
-    },
-    {
-    "header": "Bagels",
-    "items": [
-        {
+  ],
+  "bagels": [
+     {
           "name": "Single Bagel",
           "price": "$4"
         },
@@ -76,11 +70,9 @@
           "name": "Cream cheese tub",
           "price": "$7"
         }
-      ]
-    },
-    {
-    "header": "Hot Drinks",
-    "items": [
+
+  ],
+  "hotDrinks": [
         {
           "name": "Batch Brew",
           "price": "$4 / 4.5 / 5"
@@ -117,11 +109,8 @@
           "name": "Decaf",
           "price": "$0.25"
         }
-      ]
-    },
-    {
-    "header": "Cold Drinks",
-    "items": [
+  ],
+  "coldDrinks": [
         {
           "name": "Cold Brew",
           "price": "$4 / 5.75 / 7"
@@ -158,7 +147,5 @@
           "name": "Coconut Water",
           "price": "$6"
         }
-      ]
-    }
   ]
 }

@@ -1,0 +1,52 @@
+import MenuData from '../assets/menu.json';
+import { useState, useEffect } from 'react';
+
+
+export default function Menu() {
+
+
+  const foo = MenuData
+  console.log(foo)
+
+  return (
+    <div className="flex flex-row gap-20 m-10">
+      <div className="flex flex-col">
+        <h1 className="text-3xl ml-7">{menudata.sandwiches}</h1>
+        {/* <button onClick={() => resetStrikethrough('sandwiches')}>Reset</button> */}
+        <div className="relative leading-normal">
+          {sandwiches.items.map((item, i) => (
+            <div
+              key={i}
+              /* className={`flex text-lg w-full ${sandwichStrikethroughStatus[i] ? 'line-through' : ''}`} */
+              /* onClick={() => toggleStrikethrough('sandwiches', i)} */
+            >
+              <span className="w-[30px]">{i + 1}</span>
+              <span className="mr-5">{item.name}</span>
+              <span>{item.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        {otherMenus.map((category, i) => (
+          <div key={i}>
+            <h1 className="text-3xl">{category.header}</h1>
+            {/* <button onClick={() => resetStrikethrough('otherMenus', i)}>Reset</button> */}
+            <div className="relative leading-normal">
+              {category.items.map((item, j) => (
+                <div
+                  key={j}
+                  /* className={`flex text-lg w-full ${otherMenuStrikethroughStatus[i][j] ? 'line-through' : ''}`} */
+                  /* onClick={() => toggleStrikethrough('otherMenus', j)} */
+                >
+                  <span className="mr-5">{item.name}</span>
+                  <span>{item.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
