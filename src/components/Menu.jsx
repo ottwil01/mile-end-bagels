@@ -4,54 +4,56 @@ import { useState, useEffect } from 'react';
 
 export default function Menu() {
 
-  // Initialize strike-through status for all items
-  const initialStrikethroughStatus = Object.keys(MenuData).reduce((acc, category) => {
-    acc[category] = MenuData[category].map(() => false);
-    return acc;
-  }, {});
+  const [sandwichState, setSandwichState] = useState([])
+  const [bagelState, setBagelState] = useState([])
+  const [drinksState, setDrinkState] = useState([])
 
-  // State for strike-through status
-  const [strikethroughStatus, setStrikethroughStatus] = useState(initialStrikethroughStatus);
-
-  // Load the strike-through status from local storage when the component mounts
-  useEffect(() => {
-    const storedStrikethroughStatus = localStorage.getItem('strikethroughStatus');
-    if (storedStrikethroughStatus) {
-      setStrikethroughStatus(JSON.parse(storedStrikethroughStatus));
+  // more generic version.
+  // setter is the setState for whichever val you are trying to change.
+  // set is the current val for that state.
+  // item is what you are adding.
+  function handleAdd (setter, set, item) {
+    if (set.includes(item)) {
+      return setter(set)
     }
-  }, []);
+    return setter([...set, item])
+  }
 
-  const toggleStrikethrough = (category, index) => {
-    const updatedStatus = { ...strikethroughStatus };
-    updatedStatus[category][index] = !updatedStatus[category][index];
-    setStrikethroughStatus(updatedStatus);
-    // Save the updated status to local storage
-    localStorage.setItem('strikethroughStatus', JSON.stringify(updatedStatus));
-  };
+  function handleClear (setter) {
+    setter([])
+  }
 
-  const resetStrikethrough = (category) => {
-    const updatedStatus = { ...strikethroughStatus };
-    updatedStatus[category] = updatedStatus[category].map(() => false);
-    setStrikethroughStatus(updatedStatus);
-    // Reset the status in local storage
-    localStorage.removeItem('strikethroughStatus');
-  };
+  // non generic simple version (perfectly reasonable)
+  function handleAddSandwich(item) {
+    if (sandwichState.includes(item)) {
+      return setSandwichState(sandwichState)
+    }
+    return setSandwichState([...sandwichState, item])
+  }
+
+  function handleDel(setter, set, item) {
+    return setter(set.filter((it) => {
+      return it != item
+    }))
+  }
 
   return (
     <div>
       <div className="flex flex-row gap-20 m-10 bg-[url(./outline.svg)]">
         <div className="flex flex-col">
           <h1 className="text-3xl ml-7">Sandwiches</h1>
-          {/* <button onClick={() => resetStrikethrough('sandwiches')}>Reset</button> */}
           <div className="relative leading-normal">
             {MenuData.sandwiches.map((item, i) => (
               <div
                 key={i}
-                className="flex text-lg w-full"
-              /* onClick={() => toggleStrikethrough('sandwiches', i)} */
+                className="flex text-lg w-full cursor-pointer"
+                onClick={() => sandwichState.includes(item.name) ? handleDel(setSandwichState, sandwichState, item.name) : handleAdd(setSandwichState, sandwichState, item.name)}
               >
                 <span className="w-[30px]">{i + 1}</span>
-                <span className="mr-5">{item.name}</span>
+                {sandwichState.includes(item.name) ?
+                <span className='mr-5 line-through select-none'>{item.name}</span>
+                :
+                <span className='mr-5 select-none'>{item.name}</span>}
                 <span>{item.price}</span>
               </div>
             ))}
@@ -89,14 +91,12 @@ function Header(props) {
 
    return (
           <div className="mb-4">
-            {/* <button onClick={() => resetStrikethrough('otherMenus', i)}>Reset</button> */}
             <div className="relative leading-normal">
               {items.map((item, i) => (
                 <div
                   key={i}
                   className="flex text-lg w-full"
-                  /* className={`flex text-lg w-full ${otherMenuStrikethroughStatus[i][j] ? 'line-through' : ''}`} */
-                  /* onClick={() => toggleStrikethrough('otherMenus', j)} */
+
                 >
                   <span className="mr-5">{item.name}</span>
                   <span>{item.price}</span>
